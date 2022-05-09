@@ -9,140 +9,7 @@ compiler:
     remappings:
       - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.4.2"
 networks:
-  ftm-main:
-    token_names:
-      - "WFTM"
-      - "USDC"
-      - "TOMB"
-      - "SPIRIT"
-      - "DAI"
-      - "SPELL"
-      - "WETH"
-      - "WBTC"
-      - "LINK"
-    token_addresses:
-      WFTM: "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83" 
-      USDC: "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75" 
-      TOMB: "0x6c021Ae822BEa943b2E66552bDe1D2696a53fbB7" 
-      SPIRIT: "0x5cc61a78f164885776aa610fb0fe1257df78e59b" 
-      DAI: "0x8d11ec38a3eb5e956b052f67da8bdc9bef8abf3e" 
-      SPELL: "0x468003b688943977e6130f4f68f23aad939a1040"
-      WETH: "0x74b23882a30290451a17c44f4f05243b6b58c76d"
-      WBTC: "0x321162cd933e2be498cd2267a90534a804051b11"
-      LINK: "0xb3654dc3d10ea7645f8319668e8f54d2574fbdc8"
-    coingecko_ids:
-      - "fantom" 
-      - "usd-coin" 
-      - "tomb" 
-      - "spiritswap" 
-      - "dai" 
-      - "spell-token"
-      - "ethereum"
-      - "bitcoin"
-      - "chainlink"
-    lending_pool_addresses_provider_address: "0x6c793c628Fe2b480c5e6FB7957dDa4b9291F9c9b"
-    price_feed_address: "0xf4766552D15AE4d256Ad41B6cf2933482B0680dc"
-    dexes:
-      names:
-        - "spookyswap"
-        - "spiritswap"
-      spookyswap:
-        fee: 0.2
-        approx_slippage: 0.0
-        swap_router_V2_address: "0xF491e7B69E4244ad4002BC14e878a34207E38c29"
-        uniswap_factory_address: "0x152eE697f2E276fA89E96742e9bB9aB1F2E61bE3"
-      spiritswap:
-        fee: 0.3
-        approx_slippage: 0.0
-        swap_router_V2_address: "0x16327E3FbDaCA3bcF7E38F5Af2599D2DDc33aE52"
-        uniswap_factory_address: "0xEF45d134b73241eDa7703fa787148D9C9F4950b0"
-      paintswap:
-        fee: 0.3
-        approx_slippage: 0.0
-        swap_router_V2_address: "0x733A9D1585f2d14c77b49d39BC7d7dd14CdA4aa5"
-        uniswap_factory_address: "0xfD000ddCEa75a2E23059881c3589F6425bFf1AbB"
-  ftm-main-fork:
-    token_names:
-      - "WFTM"
-      - "USDC"
-    token_addresses:
-      WFTM: "0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83"
-      USDC: "0x04068DA6C83AFCFA0e13ba15A6696662335D5B75"
-    coingecko_ids:
-      - "fantom" 
-      - "usd-coin" 
-    dexes:
-      names:
-        - "spookyswap"
-        - "spiritswap"
-      spookyswap:
-        fee: 0.2
-        approx_slippage: 0.0
-        swap_router_V2_address: "0xF491e7B69E4244ad4002BC14e878a34207E38c29"
-        uniswap_factory_address: "0x152eE697f2E276fA89E96742e9bB9aB1F2E61bE3"
-      spiritswap:
-        fee: 0.3
-        approx_slippage: 0.0
-        swap_router_V2_address: "0x16327E3FbDaCA3bcF7E38F5Af2599D2DDc33aE52"
-        uniswap_factory_address: "0xEF45d134b73241eDa7703fa787148D9C9F4950b0"
-  ftm-test:
-    token_names:
-      - "WFTM"
-      - "USDC"
-    token_addresses:
-      WFTM: "0xf1277d1Ed8AD466beddF92ef448A132661956621"
-      # unclear what address to be used here
-      USDC: "0x076877073D287Ee8c10878B190d7166367899fdA"
-    dexes:
-      names:
-        - "spookyswap"
-        - "spiritswap"
-      spookyswap:
-        swap_router_V2_address: "0xcCAFCf876caB8f9542d6972f87B5D62e1182767d"
-        uniswap_factory_address: "0x5D479c2a7FB79E12Ac4eBBAeDB0322B4d5F9Fd02"
-        fee: 0.2
-        approx_slippage: 0.01
-      spiritswap:
-        swap_router_V2_address: "0xcCAFCf876caB8f9542d6972f87B5D62e1182767d"
-        uniswap_factory_address: "0x5D479c2a7FB79E12Ac4eBBAeDB0322B4d5F9Fd02"
-        fee: 0.3
-        approx_slippage: 0.05
-  avax-main:
-    token_names:
-      - "WAVAX"
-      - "USDC"
-      - "WETH"
-      - "WBTC"
-      - "DAI"
-      - "LINK"
-    token_addresses:
-      WAVAX: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7" 
-      USDC: "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e" 
-      WETH: "0x49d5c2bdffac6ce2bfdb6640f4f80f226bc10bab"
-      WBTC: "0x50b7545627a5162f82a992c33b87adc75187b218"
-      DAI: "0xd586e7f844cea2f87f50152665bcbc2c279d8d70"
-      LINK: "0x5947bb275c521040051d82396192181b413227a3"
-    coingecko_ids:
-      - "avalanche-2"
-      - "usd-coin"
-      - "ethereum"
-      - "bitcoin"
-      - "dai"
-      - "chainlink"
-    dexes:
-      names:
-        - "traderjoe"
-        - "pangolin"
-      traderjoe:
-        fee: 0.3
-        approx_slippage: 0.0
-        swap_router_V2_address: "0x60aE616a2155Ee3d9A68541Ba4544862310933d4"
-        uniswap_factory_address: "0x9Ad6C38BE94206cA50bb0d90783181662f0Cfa10"
-      pangolin:
-        fee: 0.3
-        approx_slippage: 0.0
-        swap_router_V2_address: "0xE54Ca86531e17Ef3616d22Ca28b0D458b6C89106"
-        uniswap_factory_address: "0xefa94DE7a4656D787667C749f7E1223D71E9FD88"
+  
   polygon-main:
     token_names:
       - "WMATIC"
@@ -151,6 +18,27 @@ networks:
       - "LINK"
       - "WBTC"
       - "WETH"
+      - "USDT"
+      - "COMP"
+      - "CEL"
+      - "AAVE"
+      - "CRV"
+      - "QI"
+      - "quick"
+      - "sushi"
+      - "dyfn"
+      - "bifi"
+      - "avax"
+      - "addy"
+      - "bal"
+      - "uni"
+      - "mana"
+      #- "ust"
+      - "sand"
+      - "snx"
+      - "1inch"
+      - "yfi"
+
     token_addresses:
       WMATIC: "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270" 
       USDC: "0x2791bca1f2de4661ed88a30c99a7a9449aa84174"
@@ -158,6 +46,28 @@ networks:
       LINK: "0x53e0bca35ec356bd5dddfebbd1fc0fd03fabad39"
       WBTC: "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6"
       WETH: "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619"
+      USDT: "0xc2132d05d31c914a87c6611c10748aeb04b58e8f"
+      COMP: "0x8505b9d2254a7ae468c0e9dd10ccea3a837aef5c"
+      CEL: "0xd85d1e945766fea5eda9103f918bd915fbca63e6"
+      UNI: "0xb33eaad8d922b1083446dc23f610c2567fb5180f"
+      AAVE: "0xd6df932a45c0f255f85145f286ea0b292b21c90b"
+      CRV: "0x172370d5cd63279efa6d502dab29171933a610af"
+      QI: "0x580a84c73811e1839f75d86d75d88cca0c241ff4"
+      quick: "0xb5c064f955d8e7f38fe0460c556a72987494ee17"
+      sushi: "0x0b3F868E0BE5597D5DB7fEB59E1CADBb0fdDa50a"
+      dyfn: "0xC168E40227E4ebD8C1caE80F7a55a4F0e6D66C97"
+      bifi: "0xFbdd194376de19a88118e84E279b977f165d01b8"
+      avax: "0x2C89bbc92BD86F8075d1DEcc58C7F4E0107f286b"
+      addy: "0xc3FdbadC7c795EF1D6Ba111e06fF8F16A20Ea539"
+      bal: "0x9a71012B13CA4d3D0Cdc72A177DF3ef03b0E76A3"
+      uni: "0xb33EaAd8d922B1083446DC23f610c2567fB5180f"
+      mana: "0xA1c57f48F0Deb89f569dFbE6E2B7f46D33606fD4"
+      #ust: "0x692597b009d13C4049a947CAB2239b7d6517875F"
+      sand: "0xBbba073C31bF03b8ACf7c28EF0738DeCF3695683"
+      snx: "0x50B728D8D964fd00C2d0AAD81718b71311feF68a"
+      1inch: "0x9c2C5fd7b07E95EE044DDeba0E97a665F142394f"
+      yfi: "0xDA537104D6A5edd53c6fBba9A898708E465260b6"
+
     coingecko_ids:
       - "matic-network"
       - "usd-coin"
@@ -165,39 +75,68 @@ networks:
       - "chainlink"
       - "bitcoin"
       - "ethereum"
+      - "tether"
+      - "compound-governance-token"
+      - "celsius-degree-token"
+      - "uniswap"
+      - "aave"
+      - "curve-dao-token"
+      - "qi-dao"
+      - "quickswap"
+      - "sushi"
+      - "dfyn-network"
+      - "beefy-finance"
+      - "avalanche-2"
+      - "adamant"
+      - "balancer"
+      - "uniswap"
+      - "decentraland"
+      - "the-sandbox"
+      - "havven"
+      - "1inch"
+      - "yearn-finance"
     dexes:
       names:
         - "quickswap"
+        - "sushiswap"
         - "apeswap"
+        - "dfyn"
+        - "jetswap"
+        - "waltswap"
+        
+        
       quickswap:
         fee: 0.3
-        approx_slippage: 0.0
+        approx_slippage: 0.1
         swap_router_V2_address: "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff"
         uniswap_factory_address: "0x5757371414417b8C6CAad45bAeF941aBc7d3Ab32"
-      apeswap:
-        fee: 0.2
-        approx_slippage: 0.0
-        swap_router_V2_address: "0xC0788A3aD43d79aa53B09c2EaCc313A787d1d607"
-        uniswap_factory_address: "0xCf083Be4164828f00cAE704EC15a36D711491284"
-  polygon-main-fork:
-    token_names:
-      - "WMATIC"
-      - "DAI"
-    token_addresses:
-      WMATIC: "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270" 
-      USDC: "0x2791bca1f2de4661ed88a30c99a7a9449aa84174"
-      DAI: "0x2791bca1f2de4661ed88a30c99a7a9449aa84174" 
-    dexes:
-      names:
-        - "quickswap"
-        - "apeswap"
-      quickswap:
+      sushiswap:
         fee: 0.3
-        approx_slippage: 0.0
-        swap_router_V2_address: "0xa5E0829CaCEd8fFDD4De3c43696c57F7D7A678ff"
-        uniswap_factory_address: "0x5757371414417b8C6CAad45bAeF941aBc7d3Ab32"
+        approx_slippage: 0.1
+        swap_router_V2_address: "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506"
+        uniswap_factory_address: "0xc35DADB65012eC5796536bD9864eD8773aBc74C4"
       apeswap:
-        fee: 0.2
-        approx_slippage: 0.0
+        fee: 0.3
+        approx_slippage: 0.1
         swap_router_V2_address: "0xC0788A3aD43d79aa53B09c2EaCc313A787d1d607"
-        uniswap_factory_address: "0xCf083Be4164828f00cAE704EC15a36D711491284"
+        uniswap_factory_address: "0xCf083Be4164828f00cAE704EC15a36D711491284"  
+      dfyn:
+        fee: 0.3
+        approx_slippage: 0.1
+        swap_router_V2_address: "0xA102072A4C07F06EC3B4900FDC4C7B80b6c57429"
+        uniswap_factory_address: "0xE7Fb3e833eFE5F9c441105EB65Ef8b261266423B"
+      jetswap:
+        fee: 0.3
+        approx_slippage: 0.1
+        swap_router_V2_address: "0x5C6EC38fb0e2609672BDf628B1fD605A523E5923"
+        uniswap_factory_address: "0x668ad0ed2622C62E24f0d5ab6B6Ac1b9D2cD4AC7" 
+      waltswap:
+        fee: 0.3
+        approx_slippage: 0.1
+        swap_router_V2_address: "0x3a1D87f206D12415f5b0A33E786967680AAb4f6d"
+        uniswap_factory_address: "0xa98ea6356A316b44Bf710D5f9b6b4eA0081409Ef"     
+  
+        settings:
+        gas_price: "100000000000"
+
+        
